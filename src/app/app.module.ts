@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { CustomerHomeComponent } from './components/customer-home/customer-home.component';
 import { CustomerPlaceOrderComponent } from './components/customer-place-order/customer-place-order.component';
 import {MatSelectModule} from '@angular/material/select';
+import { CustomerBlockComponent } from './components/customer-block/customer-block.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { CreateCustomerComponent } from './components/create-customer/create-customer.component';
+import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -25,7 +33,9 @@ import {MatSelectModule} from '@angular/material/select';
     AdminHomeComponent,
     HeaderComponent,
     CustomerHomeComponent,
-    CustomerPlaceOrderComponent
+    CustomerPlaceOrderComponent,
+    CustomerBlockComponent,
+    CreateCustomerComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +47,13 @@ import {MatSelectModule} from '@angular/material/select';
     MatTabsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatExpansionModule,
+    MatSelectModule,
+    HttpClientModule,
+    FormsModule,
+    ToastrModule.forRoot(),
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

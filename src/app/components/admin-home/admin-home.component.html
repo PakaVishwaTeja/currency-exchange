@@ -1,8 +1,17 @@
 <app-header heading="Admin panel"></app-header>
-<div class="py-10">
-<mat-tab-group >
-    <mat-tab label="Create Customer" > Content 1 </mat-tab>
-    <mat-tab label="Customer Details"> Content 2 </mat-tab>
-    <mat-tab label="Modify Customer"> Content 3 </mat-tab>
+<div class="py-10 " >
+<mat-tab-group [(selectedIndex)]="idx" >
+    <mat-tab label="Create Customer" >  
+      <div class="w-2/3   m-auto">
+      <app-create-customer (onCustomerSubmit)="addCustomer($event)"></app-create-customer>
+     </div> </mat-tab>
+    <mat-tab label="Customer Details"> 
+      <div class="flex  bg-slate-400 flex-col overflow-y-scroll items-center p-10 ">
+        <div class="h-[600px] ">
+        <app-customer-block *ngFor ="let customer of customers" [customer] = "customer"></app-customer-block>
+      </div>
+      </div>  
+    </mat-tab>
+    <!-- <mat-tab label="Modify Customer"> Content 3 </mat-tab> -->
   </mat-tab-group>
 </div>

@@ -1,0 +1,54 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "firstName": "tom",
+      "lastName": "sam",
+      "dob": "2003-08-22",
+      "age": 20,
+      "email": "string.dfsde@gmail.com",
+      "gender": "MALE",
+      "phone": "9432469134"
+    },
+    {
+      "id": 2,
+      "firstName": "jerry",
+      "lastName": "sam",
+      "dob": "2003-08-22",
+      "age": 20,
+      "email": "string.dfsde@gmail.com",
+      "gender": "MALE",
+      "phone": "9432469134"
+    },
+    {
+      "id": 3,
+      "firstName": "bunny",
+      "lastName": "bakki",
+      "dob": "2001-01-22",
+      "age": 25,
+      "email": "buny@b.com",
+      "gender": "MALE",
+      "phone": "9989898989"
+    },
+    {
+      "id": 99995,
+      "firstName": "Paka",
+      "lastName": "Teja",
+      "dob": "8/12/2001",
+      "age": 30,
+      "email": "vishwatejapaka@gmail.com",
+      "gender": "male",
+      "phone": "8688788865"
+    },
+    {
+      "id": 1818,
+      "firstName": "",
+      "lastName": "",
+      "dob": "8/12/2001",
+      "age": 22,
+      "email": "",
+      "gender": "",
+      "phone": ""
+    }
+  ]
+}

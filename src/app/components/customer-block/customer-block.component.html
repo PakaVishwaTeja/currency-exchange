@@ -1,0 +1,50 @@
+<mat-accordion >
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false"
+                         [ngStyle]="{'margin' : '10px' , 'background-color' : 'whitesmoke'}">
+        <mat-expansion-panel-header [ngStyle]="{'width':'90vw'}">
+            <mat-panel-title>
+                {{customer?.firstName}}
+            </mat-panel-title>
+            <mat-panel-description>
+                <div class=" w-full flex flex-row items-center justify-between">
+                    <p class="mr-auto ">Customer Id : {{customer?.id}}</p>
+                    <div class="w-1/2 flex justify-between">
+                    <button mat-flat-button color="primary">Add Account</button>
+                    <button mat-flat-button color="primary">Edit</button>
+                    <button mat-flat-button color="warn">Delete</button>
+                    </div>
+                </div>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <tr>
+            <td>firstName</td>
+            <td>{{customer?.firstName}}</td>
+        </tr>
+        <tr>
+            <td>lastname</td>
+            <td>{{customer?.lastName}}</td>
+        </tr>
+        <tr>
+            <td>DOB</td>
+            <td>{{customer?.dob}}</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>{{customer?.age}}</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>{{customer?.gender}}</td>
+        </tr>
+        <tr>
+            <td class="pr-96">Email</td>
+            <td>{{customer?.email}}</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>{{customer?.phone}}</td>
+        </tr>
+    </mat-expansion-panel>
+</mat-accordion>
+  

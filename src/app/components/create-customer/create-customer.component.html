@@ -1,0 +1,40 @@
+<form #login="ngForm"name="myForm" #myForm="ngForm" (ngSubmit)="submit(login)">
+<div class="p-11  flex flex-col ">
+    <mat-form-field  >
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="" name="firstName" ngModel>
+      </mat-form-field>
+    <mat-form-field  >
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="" name="lastName" ngModel>
+      </mat-form-field>
+    <mat-form-field  >
+        <mat-label>Email Id</mat-label>
+        <input matInput [type]="'email'" placeholder="" name="email" ngModel>
+      </mat-form-field>
+    <mat-form-field  >
+        <mat-label>Phone</mat-label>
+        <input [type]="''" matInput placeholder="" name="phone" ngModel>
+      </mat-form-field>
+    <mat-form-field>
+        <mat-label>gender</mat-label>
+        <mat-select name="gender"  ngModel>
+          <mat-option value="male">Male</mat-option>
+          <mat-option value="female" >Female </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>date of birth</mat-label>
+        <input matInput [matDatepicker]="picker" name="dob" ngModel>
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      
+      <div class="flex justify-evenly items-center py-10">
+    
+            <button type="submit" mat-flat-button color="primary" class="w-full">Create</button>
+            
+      </div>
+    </div>
+</form>
