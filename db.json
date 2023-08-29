@@ -50,5 +50,82 @@
       "gender": "",
       "phone": ""
     }
+  ],
+  "accounts": [
+    {
+      "id": 1,
+      "accs": [
+        {
+          "aid": 1,
+          "ano": "182819",
+          "currency": "USD"
+        },
+        {
+          "aid": 2,
+          "ano": "2891919",
+          "currency": "INR"
+        },
+        {
+          "aid": 3,
+          "ano": "891829",
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "accs": [
+        {
+          "aid": 1,
+          "ano": "81818",
+          "currency": "USD"
+        },
+        {
+          "aid": 2,
+          "ano": "9108101",
+          "currency": "INR"
+        },
+        {
+          "aid": 3,
+          "ano": "918201",
+          "currency": "EUR"
+        },
+        {
+          "aid": 4,
+          "ano": "23907",
+          "currency": "AED"
+        }
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "id": 55526,
+      "cid": 1,
+      "faid": "USD",
+      "taid": "INR",
+      "amount": 123
+    },
+    {
+      "id": 3527,
+      "cid": 1,
+      "faid": "INR",
+      "taid": "USD",
+      "amount": 13
+    },
+    {
+      "id": 76257,
+      "cid": 1,
+      "faid": "INR",
+      "taid": "EUR",
+      "amount": 12
+    },
+    {
+      "id": 56613,
+      "cid": 2,
+      "faid": "INR",
+      "taid": "USD",
+      "amount": 132
+    }
   ]
 }

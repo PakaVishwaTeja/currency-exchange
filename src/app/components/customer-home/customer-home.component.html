@@ -1,12 +1,20 @@
 <app-header heading="Customer panel"></app-header>
 <div class="py-10">
-<mat-tab-group >
-    <mat-tab label="List of Accounts" > Content 1 </mat-tab>
+<mat-tab-group [(selectedIndex)]="idx" >
+    <!-- <mat-tab label="List of Accounts" > Content 1 </mat-tab> -->
     <mat-tab label="Place Order page" >
         <div class="w-2/3  h-[500px] m-auto">
-         <app-customer-place-order></app-customer-place-order>
+         <app-customer-place-order cid={{cutomerId}}  (onSubmitTransaction)="onSubmitTransaction($event)"></app-customer-place-order>
         </div>
     </mat-tab>
-    <mat-tab label="Order Watchlist page"> Content 3 </mat-tab>
+    <mat-tab label="Order Watchlist page">
+      <div *ngFor="let transaction of transactions?.reverse()"  class="p-3 m-3 ">
+        <hr/>
+        <p>from : {{transaction.faid}}</p>
+        <p>to : {{transaction.taid}}</p>
+        <h4>amount : {{transaction.amount}}</h4>
+        <hr/>
+      </div>  
+    </mat-tab>
   </mat-tab-group>
 </div>

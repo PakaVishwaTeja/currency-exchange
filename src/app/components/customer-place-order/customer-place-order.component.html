@@ -1,24 +1,26 @@
-<div class="p-11 h-full flex flex-col ">
+  <form #data="ngForm"name="myForm" #myForm="ngForm" (ngSubmit)="submit(data)">
+
+    <div class="p-11 h-full flex flex-col ">
+
 <mat-form-field>
     <mat-label>Debit from</mat-label>
-    <mat-select >
-      <mat-option value="option1">Acc 1</mat-option>
-      <mat-option value="option2" >Acc 2 </mat-option>
-      <mat-option value="option3">Acc 3</mat-option>
+    <mat-select name="from" ngModel >
+      <mat-option  *ngFor="let acc of accounts" value={{acc.currency}}> a/c : {{acc.ano}}  :   {{acc.currency}}</mat-option>
+
     </mat-select>
   </mat-form-field>
 <mat-form-field>
     <mat-label>Credit to</mat-label>
-    <mat-select >
-      <mat-option value="option1">Acc 1</mat-option>
-      <mat-option value="option2" >Acc 2 </mat-option>
-      <mat-option value="option3">Acc 3</mat-option>
+    <mat-select name="to" ngModel >
+
+      <mat-option value={{acc.currency}} *ngFor="let acc of accounts"> a/c : {{acc.ano}}  :   {{acc.currency}}</mat-option>
+
     </mat-select>
   </mat-form-field>
   <mat-form-field  >
     <mat-label>amount</mat-label>
-    <input matInput placeholder="">
-    
+    <input matInput placeholder=""  name="amount" ngModel>
+    <!-- <mat-hint>Hint</mat-hint> -->
   </mat-form-field>
   <div>
     <h3>Disclaimer:</h3>
@@ -27,7 +29,9 @@
   <div class="flex justify-evenly items-center py-10">
 
         <button mat-flat-button color="warn" class="w-1/2">Cancel</button>
-        <button mat-flat-button color="primary" class="w-1/2">Submit</button>
+        <button mat-flat-button color="primary" type="submit"  class="w-1/2">Submit</button>
         
   </div>
 </div>
+
+</form>
